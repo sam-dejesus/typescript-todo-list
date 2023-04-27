@@ -12,8 +12,39 @@
   width: 540px;
   height: 540px;
 } */
-
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+}
 #list{
+ 
   list-style: none;
   padding: 0;
+}
+.main{
+  margin: 10rem;
+
+  width: 40%;
+  border-radius: 90px;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.textbox{
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.reset{
+  background-color: red;
+  border: none;
+
+}
+.completed{
+
+text-decoration-line: line-through;
+
 }
