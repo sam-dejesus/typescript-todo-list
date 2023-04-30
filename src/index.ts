@@ -22,6 +22,7 @@ const list = document.querySelector<HTMLUListElement>("#list")
 const form = document.querySelector<HTMLFormElement>("#new-task-form")
 const input= document.querySelector<HTMLInputElement>("#new-task-title")
 const reset = document.getElementById("reset")
+const clean = document.getElementById("clean")
 const task:task[] = loadTask()
 task.forEach( addListItem)
 
@@ -37,9 +38,10 @@ form?.addEventListener("submit", e=>{
     createdAt: new Date()
   }
 task.push(newTask)
-
+saveTask();
    addListItem(newTask)
    input.value = ""
+
 })
 
 function addListItem(task: task){
@@ -48,7 +50,7 @@ function addListItem(task: task){
   const checkbox = document.createElement("input");
   checkbox.addEventListener("change", () => {
     task.completed = checkbox.checked;
-    saveTask();
+    
     if (task.completed) {
       item.classList.add("completed");
     } else {
@@ -87,4 +89,7 @@ reset?.addEventListener("click", () => {
   location.reload();
 });
 
-
+clean?.addEventListener("click" ,()=>{
+  localStorage.clear();
+  location.reload();
+})
