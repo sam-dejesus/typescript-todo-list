@@ -46,6 +46,7 @@ saveTask();
 
 function addListItem(task: task){
   const item = document.createElement("li");
+  item.classList.add("listitems");
   const label = document.createElement("label");
   const checkbox = document.createElement("input");
   checkbox.addEventListener("change", () => {
