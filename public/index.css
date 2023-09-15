@@ -51,6 +51,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 
 }
 #list{
@@ -72,6 +73,8 @@ body{
 .textbox{
   margin-top: 20px;
   margin-bottom: 40px;
+  font-size: larger;
+  border-radius: 20px;
 }
 
 .completed{
